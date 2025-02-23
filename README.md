@@ -1,1 +1,7 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/4j22Em04)
+Questão 1 Os principais atributos são: marca, tipo, voltagem, potência, identificação e preço.
+
+Questão 7: O nome da classe tá escrito como Registro De Eleitor, mas não pode ter espaço entre as palavras. O correto seria RegistroDeEleitor, com a primeira letra de cada palavra maiúscula. Além disso, os atributos tituloDeEleitor, nome e zonaEleitoral não estão encapsulados, ou seja, não têm getters e setters, o que não é uma boa prática. Outro problema é que a classe não tem um construtor, então toda vez que for instanciada, os atributos vão ter que ser preenchidos manualmente, o que pode dar trabalho e causar erros.
+
+Questão 8: O método maior tá declarado como int, mas retorna true e false, o que não faz sentido, já que um método int tem que devolver um número. Já o método menor foi declarado como void, mas tenta retornar um valor inteiro (num1 ou num2). Como void significa que o método não pode retornar nada, isso tá errado. O certo seria mudar o tipo de retorno para int. Além disso, assim como na questão anterior, não tem encapsulamento e não tem construtor, o que dificulta a organização do código.
+
+Questão 14: Encapsular os atributos impede que eles sejam alterados de qualquer jeito. Isso ajuda a criar regras de validação e garante que os dados sejam modificados de forma controlada. Além disso, quando tudo passa por métodos específicos, fica mais fácil encontrar e corrigir erros no código.
