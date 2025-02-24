@@ -9,10 +9,10 @@ class ContaBancariaSimplificada {
 
     public boolean retira(double valor) {
         if (valor > saldo) {
-            return false; // Saldo insuficiente
+            return false;
         }
         saldo -= valor;
-        return true; // Retirada bem-sucedida
+        return true; 
     }
 
     public void deposita(double valor) {
@@ -30,13 +30,12 @@ class ContaBancariaSimplificada {
     public static boolean transfere(ContaBancariaSimplificada origem, ContaBancariaSimplificada destino, double valor) {
         if (origem.retira(valor)) {
             destino.deposita(valor);
-            return true; // Transferência realizada com sucesso
+            return true;
         }
-        return false; // Falha na transferência (saldo insuficiente)
+        return false;
     }
 
     public static void main(String[] args) {
-        // Criação de instâncias
         ContaBancariaSimplificada conta1 = new ContaBancariaSimplificada("João", 500);
         ContaBancariaSimplificada conta2 = new ContaBancariaSimplificada("Maria", 300);
 
@@ -44,7 +43,6 @@ class ContaBancariaSimplificada {
         System.out.println(conta1.getNome() + ": R$ " + conta1.getSaldo());
         System.out.println(conta2.getNome() + ": R$ " + conta2.getSaldo());
 
-        // Transferência de valores
         double valorTransferencia = 200;
         boolean sucesso = transfere(conta1, conta2, valorTransferencia);
 
